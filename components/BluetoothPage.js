@@ -23,9 +23,12 @@ export default class BluetoothPage extends React.Component {
         console.log(input);
     }
 
+
     handleConfirm = () => {
         const {inputString} = this.state;
         const base64Data = base64.encode(this.state.inputString); //encode the input string
+        Alert.alert(inputString + "String will be encoded as \n" + base64Data + " and will be sent to the LED board");
+
         Alert.alert(inputString + " String will be encoded as \n" + base64Data + " and will be sent to the LED board");
     }
     
@@ -67,6 +70,8 @@ export default class BluetoothPage extends React.Component {
               .then((device) => {
                 console.log(device.id);
                                 
+                device.writeCharacteristicWithResponseForService('00001101-0000-1000-8000-00805F9B34FB', 'UUIDcharc', base64Data)
+
                 device.writeCharacteristicWithResponseForService('00001101-0000-1000-8000-00805F9B34FB', 'UUIDcharc', base64Data) 
                   .then((characteristic) => { 
                     console.log(characteristic.value);
