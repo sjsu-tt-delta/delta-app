@@ -117,7 +117,9 @@ export default class BluetoothPage extends React.Component {
                 <View style = {styles.changeButton}>
                     <Button color = 'gray' title = "Change display" onPress={this.handleConfirm}/> 
                 </View>
-                
+                <View> 
+                    <Button color = 'gray' title = "Connect" onPress={this.scanAndConnect} />
+                </View>
             </View>
             </KeyboardAvoidingView>
         ) 
