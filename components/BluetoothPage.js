@@ -117,7 +117,7 @@ export default class BluetoothPage extends React.Component {
                 <View style = {styles.changeButton}>
                     <Button color = 'gray' title = "Change display" onPress={this.handleConfirm}/> 
                 </View>
-                <View> 
+                <View style = {styles.connectButton}> 
                     <Button color = 'gray' title = "Connect" onPress={this.scanAndConnect} />
                 </View>
             </View>
@@ -147,6 +147,9 @@ const styles = StyleSheet.create({
     clearButton: {
         flex: 1, 
         marginRight:5
+    },
+    connectButton: {
+        flex: 1
     },
    
     input:{
