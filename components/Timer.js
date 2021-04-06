@@ -1,17 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button,TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
+import { BleManager } from 'react-native-ble-plx';
+import base64 from 'react-native-base64';
+
 export default class Timer extends React.Component {
     constructor(props){
         super(props);
+        this.manager = new BleManager()
         this.state = {
         Minutes : 0,
         Seconds: 0,
-        
+        totalSec: 0, 
+        base64Data: "",
     }
         this.decrementMinutes = this.decrementMinutes.bind(this);
         this.decrementSeconds = this.decrementSeconds.bind(this);
         this.incrementMinutes = this.incrementMinutes.bind(this);
         this.incrementSeconds = this.incrementSeconds.bind(this);
+        this.startTimer = this.startTimer.bind(this);
+        this.stopTimer = this.stopTimer.bind(this);
     }
    
     decrementMinutes(){
@@ -37,6 +44,70 @@ export default class Timer extends React.Component {
         this.setState({Seconds: this.state.Seconds +1});
         if(this.state.Seconds == 59)
         this.setState({Seconds: 0});
+    }
+
+    startTimer() {
+        this.setState({
+            totalSec: this.state.Minutes * 60 + this.state.Seconds
+        })
+        const {totalSec} = this.state;
+        const base64Data = base64.encode(this.state.totalSec); 
+        Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
+    }
+
+    stopTimer() {
+        this.setState({
+            totalSec: 0
+        })
+        const {totalSec} = this.state;
+        const base64Data = base64.encode(this.state.totalSec); 
+        Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
+    }
+
+    componentWillMount() {
+        console.log("Mounted")
+        const subscription = this.manager.onStateChange((state) => {
+            if (state === 'PoweredOn') {
+                this.scanAndConnect();
+                subscription.remove();
+            }
+        }, true);
+    }
+
+    scanAndConnect() {
+        this.manager.startDeviceScan(null, null, (error, device) => {
+          console.log("Scanning...");
+          
+          console.log(device);
+          if (error) {
+            console.log(error.message);
+            return;
+          }
+    
+          if (device.name ===  "TTSign") {
+            console.log("Connecting to LED Board");
+            this.manager.stopDeviceScan();
+    
+            device.connect()
+              .then((device) => {
+                console.log("Discovering services and characteristics");
+                return device.discoverAllServicesAndCharacteristics()
+              })
+              .then((device) => {
+                console.log(device.id);
+                                
+                device.writeCharacteristicWithResponseForService('00001101-0000-1000-8000-00805F9B34FB', 'UUIDcharc', base64Data) 
+                  .then((characteristic) => { 
+                    console.log(characteristic.value);
+                    return 
+                  })
+              })
+              .catch((error) => {
+                console.log('Error in Writing Data');
+                console.log(error.message);
+              })
+           }
+       })
     }
 
     render(){
@@ -84,15 +155,14 @@ export default class Timer extends React.Component {
              <Button onPress = {this.incrementSeconds} color = "red" title = "+" fontWeight = "bold" />
              </View>
 
-             </View>
+            </View>
 
             <View style={styles.spaceEvenlyContainer}>
-
-                <TouchableOpacity style={styles.roundButton1}>
+                <TouchableOpacity style={styles.roundButton1} onPress = {this.stopTimer}>
                 <Text>STOP</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.roundButton2}>
+                <TouchableOpacity style={styles.roundButton2} onPress = {this.startTimer}>
                 <Text>START</Text>
                 </TouchableOpacity>
             </View>
