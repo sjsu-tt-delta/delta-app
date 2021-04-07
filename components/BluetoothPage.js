@@ -35,7 +35,7 @@ export default class BluetoothPage extends React.Component {
         })
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         console.log("Mounted")
         const subscription = this.manager.onStateChange((state) => {
             if (state === 'PoweredOn') {

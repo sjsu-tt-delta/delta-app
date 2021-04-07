@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "C:\\Users\\14087\\OneDrive\\Desktop\\Theta Tau\\delta-app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/Users/sahil/.gradle/caches/transforms-2/files-2.1/3a1c9e556421120b91c14e3b0d627909/appcompat-1.2.0/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "C:\\Users\\14087\\.gradle\\caches\\transforms-2\\files-2.1\\3a1c9e556421120b91c14e3b0d627909\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

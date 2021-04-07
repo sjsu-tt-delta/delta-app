@@ -5,278 +5,284 @@
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
+8        android:minSdkVersion="18"
 9        android:targetSdkVersion="29" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:7:3-75
-11-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:7:20-73
+11-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:5:3-75
+11-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:5:20-73
 12    <uses-permission android:name="android.permission.BLUETOOTH" />
-12-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:2:3-65
-12-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:2:20-63
+12-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:2:3-65
+12-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:2:20-63
 13    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-13-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:3:3-71
-13-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:3:20-69
-14
-15    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
-15-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:4:3-85
-15-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:4:27-83
-16
-17    <uses-feature
-17-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:5:3-87
-18        android:name="android.hardware.bluetooth_le"
-18-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:5:17-61
-19        android:required="true" />
-19-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:5:62-85
-20
-21    <uses-permission android:name="android.permission.INTERNET" />
-21-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:6:3-64
-21-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:6:20-62
-22    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-22-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:8:3-72
-22-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:8:20-70
-23    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-23-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:9:3-71
-23-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:9:20-69
-24    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-24-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:10:3-69
-24-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:10:20-67
-25    <uses-permission android:name="android.permission.VIBRATE" />
-25-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:11:3-63
-25-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:11:20-61
-26    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-26-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:12:3-77
-26-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:12:20-75
-27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-27-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:13:3-78
-27-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:13:20-76
-28    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-28-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:14:3-76
-28-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:14:20-74
-29    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-29-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:15:3-82
-29-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:15:20-80
-30    <uses-permission android:name="android.permission.CAMERA" />
-30-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:16:3-62
-30-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:16:20-60
-31    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-31-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:17:3-68
-31-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:17:20-66
-32    <uses-permission android:name="android.permission.READ_CONTACTS" />
-32-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:18:3-69
-32-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:18:20-67
-33    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-33-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:19:3-70
-33-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:19:20-68
-34    <uses-permission android:name="android.permission.READ_CALENDAR" />
-34-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:20:3-69
-34-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:20:20-67
-35    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-35-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:21:3-70
-35-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:21:20-68
-36    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-36-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:22:3-77
-36-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:22:20-75
-37    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-37-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:23:3-78
-37-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:23:20-76
-38    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-38-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:24:3-70
-38-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:24:20-68
-39    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-39-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:25:3-76
-39-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:25:20-74
-40    <uses-permission android:name="android.permission.WAKE_LOCK" />
-40-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:26:3-65
-40-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:26:20-63
-41    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-41-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:27:3-79
-41-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:27:20-77
+13-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:3:3-71
+13-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:3:20-69
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:4:3-64
+14-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:4:20-62
+15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:6:3-72
+15-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:6:20-70
+16    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+16-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:7:3-71
+16-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:7:20-69
+17    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+17-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:8:3-69
+17-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:8:20-67
+18    <uses-permission android:name="android.permission.VIBRATE" />
+18-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:9:3-63
+18-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:9:20-61
+19    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+19-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:10:3-77
+19-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:10:20-75
+20    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+20-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:11:3-78
+20-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:11:20-76
+21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+21-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:12:3-76
+21-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:12:20-74
+22    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+22-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:13:3-82
+22-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:13:20-80
+23    <uses-permission android:name="android.permission.CAMERA" />
+23-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:14:3-62
+23-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:14:20-60
+24    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+24-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:15:3-68
+24-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:15:20-66
+25    <uses-permission android:name="android.permission.READ_CONTACTS" />
+25-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:16:3-69
+25-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:16:20-67
+26    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+26-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:17:3-70
+26-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:17:20-68
+27    <uses-permission android:name="android.permission.READ_CALENDAR" />
+27-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:18:3-69
+27-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:18:20-67
+28    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+28-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:19:3-70
+28-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:19:20-68
+29    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+29-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:20:3-77
+29-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:20:20-75
+30    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+30-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:21:3-78
+30-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:21:20-76
+31    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+31-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:22:3-70
+31-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:22:20-68
+32    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+32-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:23:3-76
+32-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:23:20-74
+33    <uses-permission android:name="android.permission.WAKE_LOCK" />
+33-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:24:3-65
+33-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:24:20-63
+34    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+34-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:25:3-79
+34-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:25:20-77
+35
+36    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+36-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:26:3-85
+36-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:26:27-83
+37
+38    <uses-feature
+38-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:27:3-87
+39        android:name="android.hardware.bluetooth_le"
+39-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:27:17-61
+40        android:required="true" />
+40-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:27:62-85
+41
 42    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-42-->[com.facebook.flipper:flipper:0.54.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:16:5-76
-42-->[com.facebook.flipper:flipper:0.54.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:16:22-73
+42-->[com.facebook.flipper:flipper:0.54.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\75238863e6b45aca4b9c498f6fefb9f4\flipper-0.54.0\AndroidManifest.xml:16:5-76
+42-->[com.facebook.flipper:flipper:0.54.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\75238863e6b45aca4b9c498f6fefb9f4\flipper-0.54.0\AndroidManifest.xml:16:22-73
 43    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-43-->[:expo-location] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
-43-->[:expo-location] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
+43-->[:expo-location] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-77
+43-->[:expo-location] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-74
 44
 45    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
-45-->[com.polidea.rxandroidble:rxandroidble:1.7.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/0c73d8cbd2ad7465d91fdd2025beaf6e/jetified-rxandroidble-1.7.1/AndroidManifest.xml:15:5-86
-45-->[com.polidea.rxandroidble:rxandroidble:1.7.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/0c73d8cbd2ad7465d91fdd2025beaf6e/jetified-rxandroidble-1.7.1/AndroidManifest.xml:15:29-83
+45-->[com.polidea.rxandroidble:rxandroidble:1.7.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\547727672f7133b965f4efca7160852a\jetified-rxandroidble-1.7.1\AndroidManifest.xml:15:5-86
+45-->[com.polidea.rxandroidble:rxandroidble:1.7.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\547727672f7133b965f4efca7160852a\jetified-rxandroidble-1.7.1\AndroidManifest.xml:15:29-83
 46
 47    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-47-->[com.android.installreferrer:installreferrer:1.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/efdada9f0c0393b25c6e97117e58d231/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
-47-->[com.android.installreferrer:installreferrer:1.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/efdada9f0c0393b25c6e97117e58d231/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
+47-->[com.android.installreferrer:installreferrer:1.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\a6eae87c5424f9448a7c84b81c14ea12\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+47-->[com.android.installreferrer:installreferrer:1.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\a6eae87c5424f9448a7c84b81c14ea12\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
 48    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-48-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
-48-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+48-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:15:5-98
+48-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:15:22-95
 49    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
-49-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
-49-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+49-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:16:5-94
+49-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:16:22-91
 50
 51    <application
-51-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:28:3-46:17
+51-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:28:3-47:17
 52        android:name="com.deltaClass.TTLed.MainApplication"
-52-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:28:16-47
+52-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:28:16-47
 53        android:allowBackup="true"
-53-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:28:162-188
+53-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:28:162-188
 54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-54-->[androidx.core:core:1.3.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:24:18-86
+54-->[androidx.core:core:1.3.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\e1f0764c0505c94615b22f37f2526db5\core-1.3.0\AndroidManifest.xml:24:18-86
 55        android:debuggable="true"
 56        android:icon="@mipmap/ic_launcher"
-56-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:28:81-115
+56-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:28:81-115
 57        android:label="@string/app_name"
-57-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:28:48-80
+57-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:28:48-80
 58        android:roundIcon="@mipmap/ic_launcher_round"
-58-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:28:116-161
+58-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:28:116-161
 59        android:theme="@style/AppTheme"
-59-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:28:189-220
+59-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:28:189-220
 60        android:usesCleartextTraffic="true" >
-60-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/debug/AndroidManifest.xml:6:18-53
+60-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\debug\AndroidManifest.xml:6:18-53
 61        <meta-data
-61-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:29:5-93
+61-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:29:5-93
 62            android:name="expo.modules.updates.EXPO_SDK_VERSION"
-62-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:29:16-68
+62-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:29:16-68
 63            android:value="40.0.0" />
-63-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:29:69-91
+63-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:29:69-91
 64        <meta-data
-64-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:30:5-82
+64-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:30:5-82
 65            android:name="expo.modules.updates.ENABLED"
-65-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:30:16-59
+65-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:30:16-59
 66            android:value="true" />
-66-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:30:60-80
+66-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:30:60-80
 67        <meta-data
-67-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:31:5-105
+67-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:31:5-105
 68            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
-68-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:31:16-80
+68-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:31:16-80
 69            android:value="ALWAYS" />
-69-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:31:81-103
+69-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:31:81-103
 70        <meta-data
-70-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:32:5-99
+70-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:32:5-99
 71            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
-71-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:32:16-79
+71-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:32:16-79
 72            android:value="0" />
-72-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:32:80-97
-73
-74        <activity
-74-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:5-44:16
-75            android:name="com.deltaClass.TTLed.MainActivity"
-75-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:15-43
-76            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-76-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:77-154
-77            android:label="@string/app_name"
-77-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:44-76
-78            android:launchMode="singleTask"
-78-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:155-186
-79            android:screenOrientation="portrait"
-79-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:276-312
-80            android:theme="@style/Theme.App.SplashScreen"
-80-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:230-275
-81            android:windowSoftInputMode="adjustResize" >
-81-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:33:187-229
-82            <intent-filter>
-82-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:34:7-37:23
-83                <action android:name="android.intent.action.MAIN" />
-83-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:35:9-60
-83-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:35:17-58
-84
-85                <category android:name="android.intent.category.LAUNCHER" />
-85-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:36:9-68
-85-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:36:19-66
-86            </intent-filter>
-87            <intent-filter>
-87-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:38:7-43:23
-88                <action android:name="android.intent.action.VIEW" />
-88-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:39:9-60
-88-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:39:17-58
-89
-90                <category android:name="android.intent.category.DEFAULT" />
-90-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:40:9-67
-90-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:40:19-65
-91                <category android:name="android.intent.category.BROWSABLE" />
-91-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:41:9-69
-91-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:41:19-67
+72-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:32:80-97
+73        <meta-data
+73-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:33:5-122
+74            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+74-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:33:16-67
+75            android:value="https://exp.host/@kiwilino/delta-app" />
+75-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:33:68-120
+76
+77        <activity
+77-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:5-45:16
+78            android:name="com.deltaClass.TTLed.MainActivity"
+78-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:15-43
+79            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+79-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:77-154
+80            android:label="@string/app_name"
+80-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:44-76
+81            android:launchMode="singleTask"
+81-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:155-186
+82            android:screenOrientation="portrait"
+82-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:276-312
+83            android:theme="@style/Theme.App.SplashScreen"
+83-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:230-275
+84            android:windowSoftInputMode="adjustResize" >
+84-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:34:187-229
+85            <intent-filter>
+85-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:35:7-38:23
+86                <action android:name="android.intent.action.MAIN" />
+86-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:36:9-60
+86-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:36:17-58
+87
+88                <category android:name="android.intent.category.LAUNCHER" />
+88-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:37:9-68
+88-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:37:19-66
+89            </intent-filter>
+90            <intent-filter>
+90-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:39:7-44:23
+91                <action android:name="android.intent.action.VIEW" />
+91-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:40:9-60
+91-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:40:17-58
 92
-93                <data android:scheme="com.deltaClass.TTLed" />
-93-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:42:9-54
-93-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:42:15-52
-94            </intent-filter>
-95        </activity>
-96        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-96-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:45:5-81
-96-->/Users/sahil/SJSU Year 2/TT_Led/delta-app-1/android/app/src/main/AndroidManifest.xml:45:15-79
-97
-98        <meta-data
-98-->[:unimodules-react-native-adapter] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:91
-99            android:name="org.unimodules.core.AppLoader#react-native-headless"
-99-->[:unimodules-react-native-adapter] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
-100            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
-100-->[:unimodules-react-native-adapter] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-88
-101
-102        <provider
-102-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-26:20
-103            android:name="expo.modules.filesystem.FileSystemFileProvider"
-103-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-74
-104            android:authorities="com.deltaClass.TTLed.FileSystemFileProvider"
-104-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
-105            android:exported="false"
-105-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-37
-106            android:grantUriPermissions="true" >
-106-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-47
-107            <meta-data
-107-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-25:70
-108                android:name="android.support.FILE_PROVIDER_PATHS"
-108-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:17-67
-109                android:resource="@xml/file_system_provider_paths" />
-109-->[:expo-file-system] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
-110        </provider>
-111
-112        <service
-112-->[:expo-location] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
-113            android:name="expo.modules.location.services.LocationTaskService"
-113-->[:expo-location] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
-114            android:exported="false" />
-114-->[:expo-location] /Users/sahil/SJSU Year 2/TT_Led/delta-app-1/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
-115
-116        <activity
-116-->[com.google.android.gms:play-services-base:16.0.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/b59ad54afea15ebd9d4f166ce4bb4d59/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
-117            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-117-->[com.google.android.gms:play-services-base:16.0.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/b59ad54afea15ebd9d4f166ce4bb4d59/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
-118            android:exported="false"
-118-->[com.google.android.gms:play-services-base:16.0.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/b59ad54afea15ebd9d4f166ce4bb4d59/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
-119            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-119-->[com.google.android.gms:play-services-base:16.0.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/b59ad54afea15ebd9d4f166ce4bb4d59/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
-120
-121        <meta-data
-121-->[com.google.android.gms:play-services-basement:16.0.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/b5b3a8fbdb864eb10761921848550ba7/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
-122            android:name="com.google.android.gms.version"
-122-->[com.google.android.gms:play-services-basement:16.0.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/b5b3a8fbdb864eb10761921848550ba7/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
-123            android:value="@integer/google_play_services_version" />
-123-->[com.google.android.gms:play-services-basement:16.0.1] /Users/sahil/.gradle/caches/transforms-2/files-2.1/b5b3a8fbdb864eb10761921848550ba7/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
-124
-125        <service
-125-->[androidx.room:room-runtime:2.1.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
-126            android:name="androidx.room.MultiInstanceInvalidationService"
-126-->[androidx.room:room-runtime:2.1.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
-127            android:exported="false" />
-127-->[androidx.room:room-runtime:2.1.0] /Users/sahil/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+93                <category android:name="android.intent.category.DEFAULT" />
+93-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:41:9-67
+93-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:41:19-65
+94                <category android:name="android.intent.category.BROWSABLE" />
+94-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:42:9-69
+94-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:42:19-67
+95
+96                <data android:scheme="com.deltaClass.TTLed" />
+96-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:43:9-54
+96-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:43:15-52
+97            </intent-filter>
+98        </activity>
+99        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+99-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:46:5-81
+99-->C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\android\app\src\main\AndroidManifest.xml:46:15-79
+100
+101        <meta-data
+101-->[:unimodules-react-native-adapter] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:91
+102            android:name="org.unimodules.core.AppLoader#react-native-headless"
+102-->[:unimodules-react-native-adapter] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-79
+103            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
+103-->[:unimodules-react-native-adapter] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-88
+104
+105        <provider
+105-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-26:20
+106            android:name="expo.modules.filesystem.FileSystemFileProvider"
+106-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-74
+107            android:authorities="com.deltaClass.TTLed.FileSystemFileProvider"
+107-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-74
+108            android:exported="false"
+108-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-37
+109            android:grantUriPermissions="true" >
+109-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-47
+110            <meta-data
+110-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-25:70
+111                android:name="android.support.FILE_PROVIDER_PATHS"
+111-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:17-67
+112                android:resource="@xml/file_system_provider_paths" />
+112-->[:expo-file-system] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:17-67
+113        </provider>
+114
+115        <service
+115-->[:expo-location] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-18:40
+116            android:name="expo.modules.location.services.LocationTaskService"
+116-->[:expo-location] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-78
+117            android:exported="false" />
+117-->[:expo-location] C:\Users\14087\OneDrive\Desktop\Theta Tau\delta-app\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+118
+119        <activity
+119-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\4922e5fd8b54253b59d70d1d37bf9ef1\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+120            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+120-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\4922e5fd8b54253b59d70d1d37bf9ef1\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+121            android:exported="false"
+121-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\4922e5fd8b54253b59d70d1d37bf9ef1\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+122            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+122-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\4922e5fd8b54253b59d70d1d37bf9ef1\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+123
+124        <meta-data
+124-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\c5c5a80799ca866675533a60d70898bc\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+125            android:name="com.google.android.gms.version"
+125-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\c5c5a80799ca866675533a60d70898bc\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+126            android:value="@integer/google_play_services_version" />
+126-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\c5c5a80799ca866675533a60d70898bc\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+127
 128        <service
-128-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
-129            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
-129-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+128-->[androidx.room:room-runtime:2.1.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\1f9600edb87ec7249ed2f749439da712\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+129            android:name="androidx.room.MultiInstanceInvalidationService"
+129-->[androidx.room:room-runtime:2.1.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\1f9600edb87ec7249ed2f749439da712\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
 130            android:exported="false" />
-130-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+130-->[androidx.room:room-runtime:2.1.0] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\1f9600edb87ec7249ed2f749439da712\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
 131        <service
-131-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
-132            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
-132-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+131-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:19:9-21:40
+132            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+132-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:20:13-132
 133            android:exported="false" />
-133-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+133-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:21:13-37
 134        <service
-134-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
-135            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
-135-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+134-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:22:9-24:40
+135            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+135-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:23:13-127
 136            android:exported="false" />
-136-->[io.nlopez.smartlocation:library:3.2.11] /Users/sahil/.gradle/caches/transforms-2/files-2.1/ec7557192f605512b5ca84725764da52/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
-137    </application>
-138
-139</manifest>
+136-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:24:13-37
+137        <service
+137-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:25:9-27:40
+138            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+138-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:26:13-120
+139            android:exported="false" />
+139-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\14087\.gradle\caches\transforms-2\files-2.1\780f21b4533caf73082c5bc764b8cd0c\jetified-library-3.2.11\AndroidManifest.xml:27:13-37
+140    </application>
+141
+142</manifest>

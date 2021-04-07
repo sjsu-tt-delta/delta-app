@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button,TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, Button,TextInput, KeyboardAvoidingView, TouchableOpacity, Alert } from 'react-native';
 import { BleManager } from 'react-native-ble-plx';
 import base64 from 'react-native-base64';
 
@@ -22,49 +22,52 @@ export default class Timer extends React.Component {
     }
    
     decrementMinutes(){
-        if(this.state.Minutes>0)
-        this.setState({Minutes: this.state.Minutes -1});
-        if(this.state.Minutes ==0)
-        this.setState({Minutes: 99})
+        if(this.state.Minutes>0) 
+            this.setState({Minutes: this.state.Minutes -1});
+            this.setState({totalSec : this.state.totalSec - 60 })
+        // if(this.state.Minutes ==0)
+        //     this.setState({Minutes: 99})
     }
     decrementSeconds(){
-         if(this.state.Seconds>0)
-        this.setState({Seconds: this.state.Seconds -1});
+        if(this.state.Seconds>0) 
+            this.setState({Seconds: this.state.Seconds -1});
         if(this.state.Seconds ==0)
-        this.setState({Seconds: 59})
+            this.setState({Seconds: 59})
     }
     incrementMinutes(){
         if(this.state.Minutes < 99)
-        this.setState({Minutes: this.state.Minutes +1});
+            this.setState({Minutes: this.state.Minutes +1});
         if(this.state.Minutes == 99)
-        this.setState({Minutes: 0});
+            this.setState({Minutes: 0});
     }
     incrementSeconds(){
         if(this.state.Seconds < 59)
-        this.setState({Seconds: this.state.Seconds +1});
-        if(this.state.Seconds == 59)
-        this.setState({Seconds: 0});
+            this.setState({Seconds: this.state.Seconds +1});
+        if(this.state.Seconds == 59) 
+            this.setState({Seconds: 0});
     }
 
-    startTimer() {
+    startTimer = () => {
         this.setState({
             totalSec: this.state.Minutes * 60 + this.state.Seconds
         })
+        console.log("total sec = " + this.state.totalSec);
         const {totalSec} = this.state;
-        const base64Data = base64.encode(this.state.totalSec); 
+        const base64Data = base64.encode(this.state.totalSec.toString()); 
         Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
     }
 
-    stopTimer() {
+    stopTimer = () => {
         this.setState({
             totalSec: 0
         })
+        console.log("total sec = " + this.state.totalSec);
         const {totalSec} = this.state;
-        const base64Data = base64.encode(this.state.totalSec); 
+        const base64Data = base64.encode(this.state.totalSec.toString()); 
         Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         console.log("Mounted")
         const subscription = this.manager.onStateChange((state) => {
             if (state === 'PoweredOn') {
@@ -124,52 +127,14 @@ export default class Timer extends React.Component {
                     <Button onPress = {this.incrementSeconds} color = "red" title = "+"/>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.stopButton}>
+                    <TouchableOpacity style={styles.stopButton} onPress={this.stopTimer}>
                         <Text style = {styles.text}>STOP</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.startButton}>
+                    <TouchableOpacity style={styles.startButton} onPress={this.startTimer}>
                         <Text style = {styles.text}>START</Text>
                     </TouchableOpacity>
                 </View>
-                 
-            
-            <KeyboardAvoidingView
-             style={styles.rowContainer}
-             behavior = "padding">
-            
-            <View style={styles.timeAndButtonContainer}> 
-            <View style={styles.spaceTimeEvenly}>
-
-             <View style = {styles.timeUnit}>
-             </View>
-
-             <View style = {styles.timeUnit}>
-             <Button onPress = {this.decrementMinutes} color = "red" title = "-" />
-             <Text style = {styles.numberText}> {this.state.Minutes} Min</Text>
-             <Button onPress = {this.incrementMinutes} color = "red" title = "+" />
-             </View>
-
-             <View style = {styles.timeUnit}>
-             <Button onPress = {this.decrementSeconds} color = "red" title = "-" />
-             <Text style = {styles.numberText}> {this.state.Seconds} Sec</Text>
-             <Button onPress = {this.incrementSeconds} color = "red" title = "+" fontWeight = "bold" />
-             </View>
-
-            </View>
-
-            <View style={styles.spaceEvenlyContainer}>
-                <TouchableOpacity style={styles.roundButton1} onPress = {this.stopTimer}>
-                <Text>STOP</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.roundButton2} onPress = {this.startTimer}>
-                <Text>START</Text>
-                </TouchableOpacity>
-            </View>
-
-            </View>
-
-            </KeyboardAvoidingView>
+                
             </KeyboardAvoidingView>
         ) 
     }
