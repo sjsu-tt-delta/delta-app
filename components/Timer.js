@@ -8,6 +8,7 @@ export default class Timer extends React.Component {
         super(props);
         this.manager = new BleManager()
         this.state = {
+        Append: "b",
         Minutes : 0,
         Seconds: 0,
         totalSec: 0, 
@@ -48,13 +49,12 @@ export default class Timer extends React.Component {
     }
 
     startTimer = () => {
-        this.setState({
-            totalSec: this.state.Minutes * 60 + this.state.Seconds
-        })
-        console.log("total sec = " + this.state.totalSec);
+        this.setState(currentState => ({ totalSec: (currentState.Minutes * 60 + currentState.Seconds) }), () => {
         const {totalSec} = this.state;
-        const base64Data = base64.encode(this.state.totalSec.toString()); 
+        const base64Data = base64.encode(this.state.Append+this.state.totalSec.toString()); 
         Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
+        console.log("total sec = " + this.state.totalSec);
+        });
     }
 
     stopTimer = () => {
