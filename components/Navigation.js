@@ -1,19 +1,38 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-import Header from './layout/Header'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import ledstring from '../images/ledstring.png';
+import ledtimer from '../images/ledtimer.png';
 
 export default function NavScreen ({navigation}) {
-
         return(
             <View style={styles.container}>
-            <View style={{ borderBottomColor: '#FFFFFF', borderBottomWidth: 2, width: '100%' }} />
-            <Button color = "red" title = "LED Display" onPress = {() => navigation.navigate('Bluetooth')}/>
-            <View style={{ borderBottomColor: '#FFFFFF', borderBottomWidth: 2, width: '100%' }} />
-            <Button color = "red" title = "Timer" onPress = {() => navigation.navigate('Timer')}/>
-            <View style={{ borderBottomColor: '#FFFFFF', borderBottomWidth: 2, width: '100%' }} />
+              <Text>{'\n'}</Text>
+              <Text style={styles.text}> Type a String and display it on the LED matrix. </Text>
+              <Image style={styles.image} source = {ledstring} />
+            <TouchableOpacity
+              style = {styles.button}
+              activeOpacity = {.5}
+              onPress = {() => navigation.navigate('Bluetooth')}>
+                <Text style = {styles.text}> LED Display </Text>
+            </TouchableOpacity>
+            <Text>{'\n'}</Text>
+            <View style={{ marginTop: 10, borderBottomColor: 'white', borderBottomWidth: .5, width: '100%' }} />
+            <Text>{'\n'}</Text>
+            <Text style={styles.text}> Set a timer and watch the countdown on the LED matrix. </Text>
+            <Image style={styles.image} source = {ledtimer} />
+            <TouchableOpacity
+              style = {styles.button}
+              activeOpacity = {.5}
+              onPress = {() => navigation.navigate('Timer')}>
+                <Text style = {styles.text}> Timer </Text>
+            </TouchableOpacity>
+            <Text>{'\n'}</Text>
+            <View style={{ marginTop: 10, borderBottomColor: 'white', borderBottomWidth: .5, width: '100%' }} />
+            
             </View>
         )
-}
+  }
 
 const styles = StyleSheet.create({
     container: {
@@ -21,7 +40,23 @@ const styles = StyleSheet.create({
       backgroundColor: '#303030',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      padding: 10,
+      padding: 0,
     },
-
+    image: {
+      width: 300,
+      height: 100,
+      resizeMode: 'contain',
+    },
+    button: {
+      marginTop:15,
+      paddingTop:15,
+      paddingBottom:15,
+      width:300,
+      backgroundColor: 'maroon',
+      borderRadius: 25
+    },
+    text:{
+      color:"white",
+      textAlign:'center',
+    }
 });
