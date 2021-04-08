@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { StyleSheet, Text, View, Image, Button, TextInput, KeyboardAvoidingView, Alert } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { BleManager } from 'react-native-ble-plx';
@@ -9,13 +10,14 @@ export default class BluetoothPage extends React.Component {
         super()
         this.manager = new BleManager()
         this.state = {
+            deviceID: "",
             Append: "a",
             inputString: "",
             base64Data: "",
-
-        }; //set initial state to an empty string
-
+        };
+        //set initial state to an empty string
         this.handleUserInput = this.handleUserInput.bind(this)
+        this.scanAndConnect();
     }
 
     handleUserInput(input) { //function to update the state after user input
@@ -27,10 +29,12 @@ export default class BluetoothPage extends React.Component {
 
 
     handleConfirm = () => {
-        
         const {inputString} = this.state;
-
-        const base64Data = base64.encode(this.state.Append + this.state.inputString); //encode the input string
+        //Encode the input string to base64
+        let base64Data = base64.encode(this.state.Append+this.state.inputString.substring(0,18));
+        if (base64Data == "AA==") //If empty string, send space
+            base64Data = "IA==";
+        this.writeToDevice(base64Data);
         Alert.alert(inputString + " String will be encoded as \n" + base64Data + " and will be sent to the LED board");
     }
 
@@ -38,8 +42,20 @@ export default class BluetoothPage extends React.Component {
         this.setState({
             inputString: " "
         })
+        this.handleConfirm();
     }
 
+    writeToDevice(b64dat) {
+        //If not connected, reconnect
+        if (!this.state.deviceID || !this.manager.isDeviceConnected(this.state.deviceID)) {
+            this.scanAndConnect();
+        }
+        //Write BLE data
+        this.manager.writeCharacteristicWithResponseForDevice(this.state.deviceID, '0000ffe0-0000-1000-8000-00805f9b34fb', '0000ffe1-0000-1000-8000-00805f9b34fb', b64dat)
+    }
+
+    /*
+    //Use for iOS, not needed for Android
     UNSAFE_componentWillMount() {
         console.log("Mounted")
         const subscription = this.manager.onStateChange((state) => {
@@ -49,44 +65,40 @@ export default class BluetoothPage extends React.Component {
             }
         }, true);
     }
+    */
 
     scanAndConnect() {
         this.manager.startDeviceScan(null, null, (error, device) => {
-            console.log("Scanning...");
-
-            console.log(device);
-            if (error) {
+          console.log("Scanning...");
+          
+          console.log(device);
+          if (error) {
+            console.log(error.message);
+            return;
+          }
+    
+          if (device.name === 'TTSign' || device.id == '0000ffe0-0000-1000-8000-00805f9b34fb') {
+            console.log("Connecting to LED Board");
+            this.manager.stopDeviceScan();
+    
+            device.connect()
+              .then(device => {
+                console.log("Discovering services and characteristics")
+                return device.discoverAllServicesAndCharacteristics()
+              })
+              .then(device => {
+                console.log(device.id);
+                  this.state.deviceID = device.id;
+                  console.log("Setting notifications")
+                  return this.setupNotifications(device)
+              })
+              .catch(error => {
+                console.log('Error in Writing Data');
                 console.log(error.message);
-                return;
-            }
-
-            if (device.name === "TTSign") {
-                console.log("Connecting to LED Board");
-                this.manager.stopDeviceScan();
-
-                device.connect()
-                    .then((device) => {
-                        console.log("Discovering services and characteristics");
-                        return device.discoverAllServicesAndCharacteristics()
-                    })
-                    .then((device) => {
-                        console.log(device.id);
-
-                        device.writeCharacteristicWithResponseForService('00001101-0000-1000-8000-00805F9B34FB', 'UUIDcharc', base64Data)
-
-                        device.writeCharacteristicWithResponseForService('00001101-0000-1000-8000-00805F9B34FB', 'UUIDcharc', base64Data)
-                            .then((characteristic) => {
-                                console.log(characteristic.value);
-                                return
-                            })
-                    })
-                    .catch((error) => {
-                        console.log('Error in Writing Data');
-                        console.log(error.message);
-                    })
-            }
-        })
-
+              })
+           }
+       })
+       
     }
 
     render() {
@@ -114,7 +126,7 @@ export default class BluetoothPage extends React.Component {
                 <TouchableOpacity
                     style={styles.button}
                     activeOpacity={.5}
-                    onPress={this.changeBoard}>
+                    onPress={this.handleConfirm}>
                     <Text style={styles.text}> Change display </Text>
                 </TouchableOpacity>
 
