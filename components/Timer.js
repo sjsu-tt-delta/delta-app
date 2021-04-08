@@ -9,11 +9,12 @@ export default class Timer extends React.Component {
         super(props);
         this.manager = new BleManager()
         this.state = {
-          Append: "b",
-          Minutes : 0,
-          Seconds: 0,
-          totalSec: 0, 
-          base64Data: "",
+            deviceID: "",
+            Append: "b",
+            Minutes : 0,
+            Seconds: 0,
+            totalSec: 0, 
+            base64Data: "",
         }
         this.decrementMinutes = this.decrementMinutes.bind(this);
         this.decrementSeconds = this.decrementSeconds.bind(this);
@@ -26,6 +27,17 @@ export default class Timer extends React.Component {
         const TriangleLeft = () => {
             return <Triangle style={styles.triangleLeft} />;
         };
+
+        this.scanAndConnect();
+    }
+
+    writeToDevice(b64dat) {
+        //If not connected, reconnect
+        if (!this.state.deviceID || !this.manager.isDeviceConnected(this.state.deviceID)) {
+            this.scanAndConnect();
+        }
+        //Write BLE data
+        this.manager.writeCharacteristicWithResponseForDevice(this.state.deviceID, '0000ffe0-0000-1000-8000-00805f9b34fb', '0000ffe1-0000-1000-8000-00805f9b34fb', b64dat)
     }
    
     decrementMinutes(){
@@ -56,22 +68,27 @@ export default class Timer extends React.Component {
 
     startTimer = () => {
         this.setState(currentState => ({ totalSec: (currentState.Minutes * 60 + currentState.Seconds) }), () => {
-        const {totalSec} = this.state;
-        const base64Data = base64.encode(this.state.Append+this.state.totalSec.toString()); 
-        Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
-        console.log("total sec = " + this.state.totalSec);
+            const {totalSec} = this.state;
+            const base64Data = base64.encode(this.state.Append+this.state.totalSec.toString());
+            this.writeToDevice(base64Data)
+            Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
+            console.log("total sec = " + this.state.totalSec);
         });
     }
 
     stopTimer = () => {
         this.setState(currentState => ({totalSec: 0}), () => {
             const {totalSec} = this.state;
-            const base64Data = base64.encode(this.state.Append+this.state.totalSec.toString()); 
+            const base64Data = base64.encode(this.state.Append+this.state.totalSec.toString());
+            this.writeToDevice(base64Data)
             Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
             console.log("total sec = " + this.state.totalSec);
-            });
+        });
     }
+    
 
+    /*
+    //Use for iOS, not needed for Android
     UNSAFE_componentWillMount() {
         console.log("Mounted")
         const subscription = this.manager.onStateChange((state) => {
@@ -81,6 +98,7 @@ export default class Timer extends React.Component {
             }
         }, true);
     }
+    */
 
     scanAndConnect() {
         this.manager.startDeviceScan(null, null, (error, device) => {
@@ -92,30 +110,28 @@ export default class Timer extends React.Component {
             return;
           }
     
-          if (device.name ===  "TTSign") {
+          if (device.name === 'TTSign' || device.id == '0000ffe0-0000-1000-8000-00805f9b34fb') {
             console.log("Connecting to LED Board");
             this.manager.stopDeviceScan();
     
             device.connect()
-              .then((device) => {
-                console.log("Discovering services and characteristics");
+              .then(device => {
+                console.log("Discovering services and characteristics")
                 return device.discoverAllServicesAndCharacteristics()
               })
-              .then((device) => {
+              .then(device => {
                 console.log(device.id);
-                                
-                device.writeCharacteristicWithResponseForService('00001101-0000-1000-8000-00805F9B34FB', 'UUIDcharc', base64Data) 
-                  .then((characteristic) => { 
-                    console.log(characteristic.value);
-                    return 
-                  })
+                  this.state.deviceID = device.id;
+                  console.log("Setting notifications")
+                  return this.setupNotifications(device)
               })
-              .catch((error) => {
+              .catch(error => {
                 console.log('Error in Writing Data');
                 console.log(error.message);
               })
            }
        })
+       
     }
 
     render() {
@@ -129,28 +145,31 @@ export default class Timer extends React.Component {
                 <View style={styles.timerElements1}>
                     <View style={styles.minutesContainer}>
                         <TouchableOpacity
-                            style={styles.triangleLeft}
-                            activeOpacity={.5}
-                            onPress={this.decrementMinutes}>
-                        </TouchableOpacity>
-                        <Text style={styles.timeText}> {this.state.Minutes} </Text>
-                        <TouchableOpacity
-                            style={styles.triangleRight}
+                            style={styles.triangleUp}
                             activeOpacity={.5}
                             onPress={this.incrementMinutes}>
                         </TouchableOpacity>
+                        <Text style={styles.timeText}> {this.state.Minutes} </Text>
+                        <TouchableOpacity
+                            style={styles.triangleDown}
+                            activeOpacity={.5}
+                            onPress={this.decrementMinutes}>
+                        </TouchableOpacity>
+
                     </View>
                     <View style={styles.secondsContainer}>
                         <TouchableOpacity
-                            style={styles.triangleLeft}
-                            activeOpacity={.5}
-                            onPress={this.decrementSeconds}>
-                        </TouchableOpacity>
-                        <Text style={styles.timeText}> {this.state.Seconds} </Text>
-                        <TouchableOpacity
-                            style={styles.triangleRight}
+                            style={styles.triangleUp}
                             activeOpacity={.5}
                             onPress={this.incrementSeconds}>
+                        </TouchableOpacity>
+
+                        <Text style={styles.timeText}> {this.state.Seconds} </Text>
+
+                        <TouchableOpacity
+                            style={styles.triangleDown}
+                            activeOpacity={.5}
+                            onPress={this.decrementSeconds}>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -195,7 +214,7 @@ const styles = StyleSheet.create({
     },
     timeText: {
         color: "white",
-        fontSize: 50
+        fontSize: 80
     },
     text: {
         color: "white",
@@ -218,37 +237,36 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     minutesContainer: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         alignItems: 'center',
-        padding: 10,
+        padding: 15,
         marginBottom: 100
     },
     secondsContainer: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         alignItems: 'center',
-        padding: 10,
+        padding: 15,
         marginBottom: 100
     },
-    triangleLeft: {
+    triangleUp: {
         borderStyle: "solid",
-        borderLeftWidth: 10,
-        borderRightWidth: 10,
-        borderBottomWidth: 20,
+        borderLeftWidth: 15,
+        borderRightWidth: 15,
+        borderBottomWidth: 25,
         backgroundColor: "transparent",
         borderLeftColor: "transparent",
         borderRightColor: "transparent",
-        borderBottomColor: "gray",
-        transform: [{ rotate: "-90deg" }],
+        borderBottomColor: "gray"
     },
-    triangleRight: {
+    triangleDown: {
         borderStyle: "solid",
-        borderLeftWidth: 10,
-        borderRightWidth: 10,
-        borderBottomWidth: 20,
+        borderLeftWidth: 15,
+        borderRightWidth: 15,
+        borderBottomWidth: 25,
         backgroundColor: "transparent",
         borderLeftColor: "transparent",
         borderRightColor: "transparent",
         borderBottomColor: "gray",
-        transform: [{ rotate: "90deg" }],
+        transform: [{ rotate: "180deg" }],
     },
 });
