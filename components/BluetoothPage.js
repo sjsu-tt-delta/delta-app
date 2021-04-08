@@ -8,6 +8,7 @@ export default class BluetoothPage extends React.Component {
         super()
         this.manager = new BleManager()
         this.state = {
+            Append: "a",
             inputString: "",
             base64Data: "",
     
@@ -25,7 +26,7 @@ export default class BluetoothPage extends React.Component {
 
     handleConfirm = () => {
         const {inputString} = this.state;
-        const base64Data = base64.encode(this.state.inputString); //encode the input string
+        const base64Data = base64.encode(this.state.Append + this.state.inputString); //encode the input string
         Alert.alert(inputString + " String will be encoded as \n" + base64Data + " and will be sent to the LED board");
     }
     

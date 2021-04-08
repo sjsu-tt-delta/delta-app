@@ -32,20 +32,20 @@ export default class Timer extends React.Component {
     decrementSeconds(){
         if(this.state.Seconds>0) 
             this.setState({Seconds: this.state.Seconds -1});
-        if(this.state.Seconds ==0)
-            this.setState({Seconds: 59})
+        // if(this.state.Seconds ==0)
+        //     this.setState({Seconds: 59})
     }
     incrementMinutes(){
         if(this.state.Minutes < 99)
             this.setState({Minutes: this.state.Minutes +1});
-        if(this.state.Minutes == 99)
-            this.setState({Minutes: 0});
+        // if(this.state.Minutes == 99)
+        //     this.setState({Minutes: 0});
     }
     incrementSeconds(){
         if(this.state.Seconds < 59)
             this.setState({Seconds: this.state.Seconds +1});
-        if(this.state.Seconds == 59) 
-            this.setState({Seconds: 0});
+        // if(this.state.Seconds == 59) 
+        //     this.setState({Seconds: 0});
     }
 
     startTimer = () => {
@@ -58,13 +58,12 @@ export default class Timer extends React.Component {
     }
 
     stopTimer = () => {
-        this.setState({
-            totalSec: 0
-        })
-        console.log("total sec = " + this.state.totalSec);
-        const {totalSec} = this.state;
-        const base64Data = base64.encode(this.state.totalSec.toString()); 
-        Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
+        this.setState(currentState => ({totalSec: 0}), () => {
+            const {totalSec} = this.state;
+            const base64Data = base64.encode(this.state.Append+this.state.totalSec.toString()); 
+            Alert.alert(totalSec + " will be encoded as \n" + base64Data + " and will be sent to the LED board");
+            console.log("total sec = " + this.state.totalSec);
+            });
     }
 
     UNSAFE_componentWillMount() {
