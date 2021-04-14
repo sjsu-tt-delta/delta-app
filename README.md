@@ -1,10 +1,37 @@
 # Theta Tau Delta Pledge Class Technical Project App
+Software and app repository of the Delta Pledge Class.
+
+## Project Demo
+### Video Demonstration
+[![](https://img.youtube.com/vi/TmD5nkqbt0g/0.jpg)](https://www.youtube.com/watch?v=TmD5nkqbt0g)
+### App Interface
+![](images/tt-app.gif)
+
+## Software Committee
+**_Sahil Patel_**: Software Co-lead and Full-Stack Engineer<br/>
+-> BLE library implementation, App interface implementation<br/><br/>
+**_San Vu_**: Software Co-lead and Front-End Engineer<br/>
+-> App interface Figma prototype & App interface implementation<br/><br/>
+**_Vincent Saw_**: Project Director, Back-End Engineer<br/>
+-> BLE library implementation, Android testing<br/><br/>
+**Caitlyn Chau**: Full-Stack Engineer <br/>
+-> BLE library implementation, App interface<br/><br/>
+**Christopher Tom**: Full-Stack Engineer <br/>
+-> Countdown/Timer page, App interface implementation<br/><br/>
+**Hitayshi Shah**: Full-Stack Engineer <br/>
+-> Text Display Page, App interface implementation<br/><br/>
+**Devonna Dang**: Front-End Engineer <br/>
+-> App interface Figma prototype & App interface implementation<br/><br/>
+**Sunny Chen**: Front-End Engineer <br/>
+-> App interface Figma prototype & App interface implementation<br/><br/>
 
 ## Quick Links
 [Gantt Chart and Consolidated Sheet](https://docs.google.com/spreadsheets/d/1VhCbg1d47hBmEg20Uc_-arUAMw05hEPBOkWhSjltqOU/edit#gid=574701751)<br/>
 [Software Committee Resources](https://docs.google.com/document/d/1AEHoXo0-nwg2GfUm3lj_bZPsCf9YJ_akLvOFAsaAjLQ/edit#)<br/>
+[Project Presentation](https://docs.google.com/presentation/d/1MC0XHRqNYXeY45uN3Q5Jt8sAotjQurosrFn7ysKqrGg/edit?usp=sharing)<br/>
 [react-native-ble-plx 2.0.2 Documentation](https://polidea.github.io/react-native-ble-plx/)<br/>
 [react-native-ble-plx GitHub](https://github.com/Polidea/react-native-ble-plx)<br/>
+
 
 ## Getting Started with Git & GitHub
 ### Installing Git and Planning Your Environment
